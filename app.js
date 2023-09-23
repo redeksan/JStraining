@@ -11,20 +11,18 @@ counter.innerText = 0
 box.appendChild(counter)
 
 function creatButton(name , id){
-const button = document.createElement('button')
-button.innerText = name
-button.id = id
-button.addEventListener('click', (event) => {
-      calculate(button.id)
-})
-box.appendChild(button)
-console.log(name)
-return button
+      const button = document.createElement('button')
+      button.innerText = name
+      button.id = id
+      button.addEventListener('click', (event) => calculate(button.id))
+      box.appendChild(button)
+      console.log(name)
+      return button
 }
 
 function calculate(btnId){
-        if (btnId === 'btnPlus') return +counter.innerHTML++
-        if (btnId === 'btnMinus') return +counter.innerHTML--
+      if (btnId === 'btnPlus') return +counter.innerHTML++
+      if (btnId === 'btnMinus') return +counter.innerHTML--
 
 }
 
