@@ -32,12 +32,6 @@ function calculate(btnId){
 
 
 
-// console.log(box)
-// console.log(plus)
-// console.log(minus)
-// console.log(counter)
-// console.log(document.getElementsByTagName('button'))
-
 
 
 
