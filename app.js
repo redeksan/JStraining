@@ -16,7 +16,6 @@ function creatButton(name , id){
       button.id = id
       button.addEventListener('click', (event) => calculate(button.id))
       box.appendChild(button)
-      console.log(name)
       return button
 }
 
