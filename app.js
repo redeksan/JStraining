@@ -2,8 +2,11 @@ const box = document.createElement('div')
 box.id = 'box'
 document.body.appendChild(box)
 
-const plus = creatButton( 'Plus' , 'btnPlus')
+const minusTen = creatButton( 'Minus 10' , 'btnMinusTen')
 const minus = creatButton( 'Minus' , 'btnMinus')
+const reset = creatButton( 'Reset' , 'reset')
+const plus = creatButton( 'Plus' , 'btnPlus')
+const plusTen = creatButton( 'Plus 10' , 'btnPlusTen')
 
 const counter = document.createElement("div")
 counter.id = 'counter'
@@ -20,8 +23,21 @@ function creatButton(name , id){
 }
 
 function calculate(btnId){
-      if (btnId === 'btnPlus') return +counter.innerHTML++
-      if (btnId === 'btnMinus') return +counter.innerHTML--
+      let calculationActionResult = 0
+      switch (btnId){
+            case 'btnPlusTen' : calculationActionResult = +counter.innerHTML + 10
+                  break
+            case 'btnPlus' : calculationActionResult = +counter.innerHTML + 1
+                  break
+            case 'reset' : calculationActionResult = 0 
+                  break
+            case 'btnMinus' : calculationActionResult = +counter.innerHTML - 1
+                  break
+            case 'btnMinusTen' : calculationActionResult = +counter.innerHTML - 10
+                  break
+            default : console.log('button action undefined')
+      }
+      counter.innerHTML = calculationActionResult > 0 ? calculationActionResult : 0
 }
 
 
