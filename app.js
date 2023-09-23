@@ -22,7 +22,6 @@ function creatButton(name , id){
 function calculate(btnId){
       if (btnId === 'btnPlus') return +counter.innerHTML++
       if (btnId === 'btnMinus') return +counter.innerHTML--
-
 }
 
 
