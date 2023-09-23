@@ -1,5 +1,5 @@
-const box = document.createElement("div")
-box.id = "box"
+const box = document.createElement('div')
+box.id = 'box'
 document.body.appendChild(box)
 
 const plus = creatButton( 'Plus' , 'btnPlus')
