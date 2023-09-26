@@ -35,7 +35,7 @@ function calculate(btnId){
                   break
             case 'btnMinusTen' : calculationActionResult = +counter.innerHTML - 10
                   break
-            default : console.log('button action undefined')
+            default : console.log('button action undefined!')
       }
       counter.innerHTML = calculationActionResult > 0 ? calculationActionResult : 0
 }
